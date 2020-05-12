@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node start.js"
+    "test": "mocha --no-timeouts \"test/*.test.js\""
   },
   "author": "Raja Rao DV",
   "license": "ISC",
   "devDependencies": {
-    "eyes.selenium": "0.0.83",
+    "mocha": "^6.2.3",
+    "chromedriver": "latest",
+    "eyes.selenium": "latest",
     "selenium-webdriver": "^3.6.0"
   }
 }
