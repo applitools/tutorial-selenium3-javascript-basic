@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node start.js"
+    "test": "mocha --no-timeouts \"test/*.test.js\""
   },
   "author": "Raja Rao DV",
   "license": "ISC",
