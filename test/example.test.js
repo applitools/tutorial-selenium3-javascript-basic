@@ -2,7 +2,7 @@
 
 require('chromedriver');
 const { Builder, Capabilities, By} = require('selenium-webdriver');
-const { Eyes, Target, GeneralUtils} = require('eyes.selenium');
+const { Eyes, Target, BatchInfo} = require('@applitools/eyes-selenium');
 
 describe('DemoApp - Original', function () {
     let eyes, driver;
@@ -16,11 +16,7 @@ describe('DemoApp - Original', function () {
         eyes.setApiKey('APPLITOOLS_API_KEY');
 
         // set new batch
-        eyes.setBatch({
-            id: GeneralUtils.guid(),
-            name: 'Demo batch',
-            startedAt: new Date().toUTCString(),
-        });
+        eyes.setBatch(new BatchInfo('Demo batch'))
 
         // Use Chrome browsert
         driver = await new Builder()
