@@ -7,7 +7,13 @@ const { Eyes, Target, BatchInfo} = require('@applitools/eyes-selenium');
 describe('DemoApp - Original', function () {
     let eyes, driver;
 
-    beforeEach(async () => {
+    before(async () => {
+
+        // Use Chrome browser
+        driver = await new Builder()
+            .withCapabilities(Capabilities.chrome())
+            .build();
+
         // Initialize the eyes SDK and set your private API key
         eyes = new Eyes();
 
@@ -18,14 +24,12 @@ describe('DemoApp - Original', function () {
         // set new batch
         eyes.setBatch(new BatchInfo('Demo batch'))
 
-        // Use Chrome browsert
-        driver = await new Builder()
-            .withCapabilities(Capabilities.chrome())
-            .build();
     });
 
     it('Smoke Test', async () => {
-        // Start the test and set the App name, the Test name and the browser's viewport size to 800x600.
+        // Set AUT's name, test name and viewport size (width X height)
+        // We have set it to 800 x 600 to accommodate various screens. Feel free to
+        // change it.
         await eyes.open(driver, 'Demo App', 'Smoke Test', { width: 800, height: 600});
 
         // Navigate the browser to the "ACME" demo app.
@@ -34,7 +38,8 @@ describe('DemoApp - Original', function () {
         // To see visual bugs after the first run, use the commented line below instead.
         // await driver.get("https://demo.applitools.com/index_v2.html");
 
-        // Visual checkpoint #1 - Check the login page.
+        // Visual checkpoint #1 - Check the login page. using the fluent API
+        // https://applitools.com/docs/topics/sdk/the-eyes-sdk-check-fluent-api.html?Highlight=fluent%20api
         await eyes.check("Login Window", Target.window().fully());
 
         // This will create a test with two test steps.
@@ -48,7 +53,7 @@ describe('DemoApp - Original', function () {
         console.log(results);
     });
 
-    afterEach(async () => {
+    after(async () => {
         // Close the browser.
         await driver.quit();
 
