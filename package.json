@@ -11,7 +11,7 @@
   "devDependencies": {
     "@applitools/eyes-selenium": "latest",
     "chromedriver": "latest",
-    "mocha": "^6.2.3",
+    "mocha": "latest",
     "selenium-webdriver": "^4.0.0-alpha.7"
   }
 }

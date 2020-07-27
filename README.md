@@ -8,5 +8,7 @@
     * Option 1: `git clone https://github.com/applitools/tutorial-selenium-javascript-basic.git`
     * Option 2: Download it as a Zip file and extract it
 2. CD into the `tutorial-selenium-javascript-basic` folder
-3. run `npm install`
-4. run `npm test`
+3. Set up environment variable `APPLITOOLS_API_KEY` with your own API key.
+    * Don't forget to change the example with your own API key   
+4. run `npm install`
+5. run `npm test`
