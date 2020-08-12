@@ -1,4 +1,4 @@
-## This is for Selenium 3 users. Please use https://github.com/applitools/tutorial-selenium4-javascript-basic tutorial if you are using Selenium 4.
+#### This is for Selenium 3 users. Please use [tutorial-selenium4-javascript-basic](https://github.com/applitools/tutorial-selenium4-javascript-basic) tutorial if you are using Selenium 4.
 
 # Pre-requisites:
 
