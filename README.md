@@ -1,3 +1,5 @@
+## This is for Selenium 3 users. Please use https://github.com/applitools/tutorial-selenium4-javascript-basic tutorial if you are using Selenium 4.
+
 # Pre-requisites:
 
 1. Install Node.js from [here](https://nodejs.org/en/)
