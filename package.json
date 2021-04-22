@@ -6,7 +6,10 @@
   "scripts": {
     "test": "mocha --no-timeouts \"test/*.test.js\""
   },
-  "author": "Applitools",
+  "author": {
+    "name": "Applitools Team",
+    "email": "team@applitools.com"
+  },
   "license": "ISC",
   "dependencies": {
     "@applitools/eyes-selenium": "^4.53.0",
