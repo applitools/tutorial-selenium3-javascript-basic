@@ -1,10 +1,9 @@
 'use strict';
 
-require('chromedriver');
 const { Builder, Capabilities, By} = require('selenium-webdriver');
 const { Eyes, Target, BatchInfo} = require('@applitools/eyes-selenium');
 
-describe('DemoApp - Original', function () {
+describe('DemoApp', function () {
     let eyes, driver;
 
     before(async () => {
@@ -14,12 +13,8 @@ describe('DemoApp - Original', function () {
             .withCapabilities(Capabilities.chrome())
             .build();
 
-        // Initialize the eyes SDK and set your private API key
+        // Initialize the eyes SDK
         eyes = new Eyes();
-
-        // Add your API key (the API key can be set via APPLITOOLS_API_KEY env variable)
-        // You can get your api key from the Applitools dashboard
-        eyes.setApiKey('APPLITOOLS_API_KEY');
 
         // set new batch
         eyes.setBatch(new BatchInfo('Demo batch'))
@@ -30,7 +25,7 @@ describe('DemoApp - Original', function () {
         // Set AUT's name, test name and viewport size (width X height)
         // We have set it to 800 x 600 to accommodate various screens. Feel free to
         // change it.
-        await eyes.open(driver, 'Demo App', 'Smoke Test', { width: 800, height: 600});
+        await eyes.open(driver, 'Demo App - Selenium JavaScript 3', 'Smoke Test', { width: 800, height: 600});
 
         // Navigate the browser to the "ACME" demo app.
         await driver.get("https://demo.applitools.com");

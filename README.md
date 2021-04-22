@@ -1,16 +1,17 @@
-#### This is for Selenium 3 users. Please use [tutorial-selenium4-javascript-basic](https://github.com/applitools/tutorial-selenium4-javascript-basic) tutorial if you are using Selenium 4.
+# Applitools Tutorial - Selenium JavaScript 3
 
-# Pre-requisites:
+Get started with Applitools Eyes visual testing with this example of using Selenium JavaScript 3 and the [Eyes Selenium JavaScript SDK](https://www.npmjs.com/package/@applitools/eyes-selenium).
 
-1. Install Node.js from [here](https://nodejs.org/en/)
+Learn more about how to install and start this project with our [Selenium JavaScript tutorial](https://applitools.com/tutorials/selenium-javascript.html)!
 
-# Steps to run this example
+<https://applitools.com/tutorials/selenium-javascript.html>
 
-1. Download the example
-    * Option 1: `git clone https://github.com/applitools/tutorial-selenium3-javascript-basic.git`
-    * Option 2: Download it as a Zip file and extract it
-2. CD into the `tutorial-selenium3-javascript-basic` folder
-3. Set up environment variable `APPLITOOLS_API_KEY` with your own API key.
-    * Don't forget to change the example with your own API key   
-4. run `npm install`
-5. run `npm test`
+*This is for Selenium 3 users. Please use [tutorial-selenium-javascript-basic](https://github.com/applitools/tutorial-selenium-javascript-basic) tutorial if you are using Selenium 4.*
+
+## More Information
+
+Learn more about Applitools [Eyes](https://info.applitools.com/ucY77) and the [Ultrafast Test Cloud](https://info.applitools.com/ucY78) at [applitools.com](https://info.applitools.com/ucY76).
+
+More about the Eyes Images SDK:
+* https://www.npmjs.com/package/@applitools/eyes-selenium
+* https://applitools.com/docs/api/eyes-sdk/index-gen/classindex-selenium4-javascript.html

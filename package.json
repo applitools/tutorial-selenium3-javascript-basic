@@ -1,17 +1,16 @@
 {
-  "name": "tutorial-selenium-javascript",
+  "name": "tutorial-selenium3-javascript-basic",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "mocha --no-timeouts \"test/*.test.js\""
   },
-  "author": "Raja Rao DV",
+  "author": "Applitools",
   "license": "ISC",
-  "devDependencies": {
-    "@applitools/eyes-selenium": "latest",
-    "chromedriver": "latest",
-    "mocha": "latest",
-    "selenium-webdriver": "^4.0.0-alpha.7"
+  "dependencies": {
+    "@applitools/eyes-selenium": "^4.53.0",
+    "mocha": "^8.3.2",
+    "selenium-webdriver": "^3.6.0"
   }
 }
