@@ -1,6 +1,7 @@
 'use strict';
 
 const { Builder, Capabilities, By} = require('selenium-webdriver');
+const { Options } = require('selenium-webdriver/chrome')
 const { Eyes, Target, BatchInfo} = require('@applitools/eyes-selenium');
 
 describe('DemoApp', function () {
@@ -8,9 +9,12 @@ describe('DemoApp', function () {
 
     before(async () => {
 
+        const options = new Options();
+        if (process.env.CI === 'true') options.headless();
         // Use Chrome browser
         driver = await new Builder()
             .withCapabilities(Capabilities.chrome())
+            .setChromeOptions(options)
             .build();
 
         // Initialize the eyes SDK
@@ -53,6 +57,6 @@ describe('DemoApp', function () {
         await driver.quit();
 
         // If the test was aborted before eyes.close was called, ends the test as aborted.
-        await eyes.abortIfNotClosed();
+        await eyes.abort();
     });
 });
