@@ -12,7 +12,7 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@applitools/eyes-selenium": "^4.56.1",
+    "@applitools/eyes-selenium": "^4.56.2",
     "mocha": "^8.4.0",
     "selenium-webdriver": "^3.6.0"
   }
